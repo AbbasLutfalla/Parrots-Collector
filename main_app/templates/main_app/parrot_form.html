@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% if object %}
+<h1 class="ww">Edit <span class="teal-text">{{ object.name }}</span></h1>
+{% else %}
+<h1 class="ww">Add Parrot</h1>
+{% endif %}
+
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <table class="ww">
+    {{ form.as_table }}
+  </table>
+  <input type="submit" name="Submit!" class="btn">
+</form>
+{% endblock %}

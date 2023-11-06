@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'my_new_app',
+    'main_app',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,11 +77,9 @@ WSGI_APPLICATION = 'parrotcollector.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'HOST': 'flora.db.elephantsql.com',
-        'PORT': '5432',
-        'USER': 'jfejaqlx',
-        'PASSWORD':'SzfsPr24wR-4p-2rhAds39luv9_cQBAe',
-        'NAME': 'jfejaqlx',
+        'NAME': 'parrotcollectorv1',
+        'USER': 'postgres',
+        'PASSWORD':'12345678',
     }
 }
 

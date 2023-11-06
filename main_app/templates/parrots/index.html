@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Parrots List</h1>
+
+{% for parrot in parrots %}
+<div class="card">
+
+  <a href="{% url 'detail' parrot.id %}">
+    <div class="card-content">
+
+      <div class="flex-container">
+
+        <div>
+
+          <span class="card-title">{{ parrot.name }}</span>
+          <p>Breed: {{ parrot.breed }}</p>
+          <p>Description: {{ parrot.description }}</p>
+          <p>Type: {{ parrot.type }}</p>
+
+          {% if parrot.age > 0 %}
+          <p>{{ parrot.age }}</p>
+          {% else %}
+          <p>little Parrots</p>
+          {% endif %}
+
+        </div>
+
+        <div>
+          {% load static %}
+          <img width="100px" height="100px" src="{% static parrot.image|cut:'main_app/static/' %}" />
+        </div>
+
+      </div>
+    </div>
+  </a>
+</div>
+{% endfor %}
+{% endblock %}
