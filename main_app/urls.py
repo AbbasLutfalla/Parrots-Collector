@@ -7,9 +7,8 @@ path('about/', views.about, name='about'),
 path('parrots/', views.parrots_index, name='index'),
 path('parrots/<int:parrot_id>', views.parrots_detail, name='detail'),
 
-# Express
-# Get the form
-# Post the form
+
+
 path('parrot/create/',views.ParrotCreate.as_view(),name="parrots_create"),
 path('parrot/<int:pk>/update/',views.ParrotUpdate.as_view(),name="parrots_update"),
 path('parrot/<int:pk>/delete/',views.ParrotDelete.as_view(),name="parrots_delete"),
@@ -24,4 +23,5 @@ path('toys/<int:pk>/delete', views.ToyDelete.as_view(), name= 'toys_delete'),
 
 path('parrots/<int:parrot_id>/assoc_toy/<int:toy_id>/', views.assoc_toy, name='assoc_toy'),
 path('parrots/<int:parrot_id>/unassoc_toy/<int:toy_id>/', views.unassoc_toy, name='unassoc_toy'),
+path('accounts/signup/', views.signup, name='signup'),
 ]

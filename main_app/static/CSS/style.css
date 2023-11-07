@@ -46,3 +46,8 @@ footer.page-footer {
 label {
   color: white !important;
 }
+
+
+.btn {
+  background-color: blueviolet !important;
+}
